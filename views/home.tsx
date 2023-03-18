@@ -1,22 +1,15 @@
-import Link from 'next/link';
 import { FC } from 'react';
 
-import { Layout, Logo } from '../components';
-import { RoutePaths, RoutesEnum } from '../constants/routes';
-import { Box, Typography } from '../elements';
+import { Column, Layout } from '../components';
+import { Box } from '../elements';
 
 const Home: FC = () => (
   <Layout pageTitle="Home">
-    <Box
-      bg="background"
-      p="XXXL"
-      borderRadius="S"
-      borderTopRightRadius="0"
-      borderTopLeftRadius="0"
-    >
-      <Logo />
-      <Typography as="h1">Home</Typography>
-      <Link href={RoutePaths[RoutesEnum.Home]}>Goto To Other Page &rarr; </Link>
+    <Box display="flex">
+      <Column title="Todo" id="todo" />
+      <Column title="In Progress" id="progress" />
+      <Column title="Done" id="done" />
+      <Column newColumn />
     </Box>
   </Layout>
 );

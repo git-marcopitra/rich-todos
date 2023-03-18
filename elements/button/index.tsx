@@ -1,46 +1,17 @@
-import styled from '@emotion/styled';
-import { css } from '@styled-system/css';
+import stylin, { StylinComponentProps, variant } from '@stylin.js/react';
 import { forwardRef } from 'react';
-import {
-  border,
-  color,
-  compose,
-  display,
-  flexbox,
-  layout,
-  position,
-  shadow,
-  space,
-  system,
-  typography,
-  variant,
-} from 'styled-system';
 
 import { ButtonProps } from './button.types';
 
-const Button = forwardRef(({ hover, active, ...props }: ButtonProps, ref) => {
-  const ButtonElement = styled.button(
-    css({
-      ...(hover && { transition: 'all 250ms ease-in-out', ':hover': hover }),
-      ...(active && { ':active': active }),
+const Button = forwardRef((props: ButtonProps & StylinComponentProps, ref) => {
+  const ButtonElement = stylin<ButtonProps>('button')(
+    variant({
+      scale: 'buttons',
+      property: 'variant',
     }),
-    variant({ scale: 'buttons' }),
-    variant({ prop: 'effect', scale: 'effects' }),
-    compose(
-      color,
-      space,
-      border,
-      shadow,
-      display,
-      position,
-      layout,
-      flexbox,
-      typography,
-      system({
-        cursor: true,
-      })
-    )
+    variant({ property: 'effect', scale: 'effects' })
   );
+
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   return <ButtonElement {...props} ref={ref} />;

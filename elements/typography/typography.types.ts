@@ -1,30 +1,9 @@
-import { SystemStyleObject } from '@styled-system/css';
-import { CSSProperties, HTMLAttributes } from 'react';
-import {
-  BorderProps,
-  ColorProps,
-  FlexboxProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
-  TextShadowProps,
-  TypographyProps as TypoProps,
-} from 'styled-system';
+import { HTMLAttributes } from 'react';
+
+import { Theme } from '../../design-system/main-theme';
 
 export interface TypographyProps
-  extends LayoutProps,
-    TypoProps,
-    ColorProps,
-    SpaceProps,
-    BorderProps,
-    FlexboxProps,
-    PositionProps,
-    TextShadowProps,
-    Omit<HTMLAttributes<HTMLElement>, 'color'> {
-  hover?: SystemStyleObject;
-  active?: SystemStyleObject;
+  extends Omit<HTMLAttributes<HTMLParagraphElement>, 'color' | 'translate'> {
   as?: keyof JSX.IntrinsicElements;
-  cursor?: CSSProperties['cursor'];
-  whiteSpace?: CSSProperties['whiteSpace'];
-  textTransform?: CSSProperties['textTransform'];
+  variant: keyof Theme['typography'];
 }

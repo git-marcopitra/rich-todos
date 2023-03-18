@@ -5,8 +5,7 @@ const GlobalStyles = css`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Andika', sans-serif;
   }
 
   body {
@@ -15,6 +14,12 @@ const GlobalStyles = css`
 
   a {
     text-decoration: none;
+  }
+
+  button,
+  input {
+    border: none;
+    outline: none;
   }
 `;
 

@@ -19,7 +19,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["simple-import-sort", "@emotion", "react", "@typescript-eslint"],
+  "plugins": [
+    "simple-import-sort",
+    "@emotion",
+    "react",
+    "@typescript-eslint",
+    "unused-imports"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
@@ -34,6 +40,16 @@
     "@emotion/no-vanilla": "error",
     "@emotion/import-from-emotion": "error",
     "@emotion/styled-import": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   }
