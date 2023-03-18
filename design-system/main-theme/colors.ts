@@ -2,7 +2,7 @@ import primitiveColors from '../common/primitive-colors';
 
 const colors = {
   accent: primitiveColors.PRIMARY_100,
-  alternative: primitiveColors.PRIMARY_100,
+  alternative: primitiveColors.PRIMARY_200,
   background: primitiveColors.NEUTRAL_400,
   foreground: primitiveColors.NEUTRAL_300,
   textSoft: primitiveColors.NEUTRAL_200,

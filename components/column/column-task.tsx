@@ -6,11 +6,11 @@ import { ColumnTaskProps } from './column.types';
 
 const ColumnTask: FC<ColumnTaskProps> = ({ name, labels }) => (
   <Box
-    bg="foreground"
     p="L"
     mt="L"
-    borderRadius="M"
     draggable
+    bg="foreground"
+    borderRadius="M"
     boxShadow="0.2rem 0.2rem 0.2rem  #5C5A8C33"
   >
     <Typography variant="normal" mb="L">

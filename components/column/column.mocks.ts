@@ -34,7 +34,7 @@ export const COLUMN_MOCK_DATA = [
   {
     uuid: v4(),
     name: 'Add support to Active sidebar item',
-    status: 'progress',
+    status: 'done',
     labels: ['Functional', 'dependency'],
   },
 ];
