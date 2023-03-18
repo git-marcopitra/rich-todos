@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { v4 } from 'uuid';
 
 import { Box, Typography } from '../../elements';
 import { ColumnTaskProps } from './column.types';
@@ -10,7 +11,7 @@ const ColumnTask: FC<ColumnTaskProps> = ({ name, labels }) => (
     mt="L"
     borderRadius="M"
     draggable
-    boxShadow="0.2rem 0.2rem 0.2rem  #5C5A8C44"
+    boxShadow="0.2rem 0.2rem 0.2rem  #5C5A8C33"
   >
     <Typography variant="normal" mb="L">
       {name}
@@ -20,11 +21,11 @@ const ColumnTask: FC<ColumnTaskProps> = ({ name, labels }) => (
         <Typography
           px="M"
           mr="S"
+          key={v4()}
           bg="accent"
           variant="small"
           borderRadius="M"
           display="inline-block"
-          key={crypto.randomUUID()}
           textTransform="capitalize"
         >
           {label}
