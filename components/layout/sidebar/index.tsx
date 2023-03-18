@@ -16,7 +16,7 @@ const Sidebar: FC = () => {
       bg="foreground"
       flexDirection="column"
       borderRight="1px solid"
-      borderColor="textSoft"
+      borderColor="border"
     >
       <Box p="XL" display="flex" alignItems="center">
         <LogoSVG height="2.5rem" />

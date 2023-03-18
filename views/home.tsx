@@ -5,7 +5,8 @@ import { Box } from '../elements';
 
 const Home: FC = () => (
   <Layout pageTitle="Home">
-    <Box display="flex">
+    <Box as="section" display="flex" overflow="auto" pb="XL">
+      <Column title="Backlog" id="backlog" />
       <Column title="Todo" id="todo" />
       <Column title="In Progress" id="progress" />
       <Column title="Done" id="done" />

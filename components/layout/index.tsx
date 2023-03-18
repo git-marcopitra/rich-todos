@@ -15,17 +15,16 @@ const Layout: FC<LayoutProps> = ({ pageTitle = '', children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
       </Head>
-      <Box
-        as="main"
-        color="text"
-        display="flex"
-        bg="background"
-        minHeight="100vh"
-        alignItems="stretch"
-      >
+      <Box as="main" color="text" height="100vh" display="flex" bg="background">
         <Sidebar />
-        <Box width="100%">
+        <Box
+          height="100vh"
+          display="flex"
+          flexDirection="column"
+          width="calc(100vw - 16rem)"
+        >
           <Header />
+
           {children}
         </Box>
       </Box>

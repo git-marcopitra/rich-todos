@@ -1,4 +1,4 @@
-export type Columns = 'todo' | 'progress' | 'done';
+export type Columns = 'backlog' | 'todo' | 'progress' | 'done';
 
 export interface NewColumnProps {
   newColumn: true;

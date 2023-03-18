@@ -9,7 +9,7 @@ const GlobalStyles = css`
   }
 
   body {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   a {

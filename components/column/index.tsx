@@ -12,7 +12,7 @@ const Column: FC<ColumnProps> = (props) => {
       <Box minWidth="15rem" m="M" p="M">
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <input type="text" placeholder="Add new column..." />
-          <Button variant="secondary" p="M" borderRadius="S">
+          <Button variant="primary" p="M" borderRadius="S">
             +
           </Button>
         </Box>
@@ -25,7 +25,7 @@ const Column: FC<ColumnProps> = (props) => {
     <Box minWidth="15rem" m="M" p="M">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Typography variant="normal">{title}</Typography>
-        <Button variant="secondary" p="M" borderRadius="S">
+        <Button variant="primary" p="M" borderRadius="S">
           ···
         </Button>
       </Box>
