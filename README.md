@@ -1,4 +1,4 @@
-# NSDEV React Template
+# BOARDi
 
 ## Code Style
 
@@ -10,7 +10,7 @@ You must to install in your VSCode
 ## Technologies
 
 - [Typescript](https://typescriptlang.org)\*
-- [Styled System](https://styled-system.com)\*
+- [Stylin.js](https://github.com/git-marcopitra/stylin.js)\*
 - [Emotion](https://emotion.sh/docs/introduction)\*
 - [NextJS](https://nextjs.org/docs/getting-started)\*
 - [Jest](https://jestjs.io)
