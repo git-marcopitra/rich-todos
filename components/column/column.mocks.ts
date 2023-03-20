@@ -1,6 +1,8 @@
 import { v4 } from 'uuid';
 
-export const COLUMN_MOCK_DATA = [
+import { CardData } from './column.types';
+
+export const COLUMN_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Sidebar',
@@ -16,7 +18,7 @@ export const COLUMN_MOCK_DATA = [
   {
     uuid: v4(),
     name: 'Column Style',
-    status: 'todo',
+    status: 'progress',
     labels: ['Frontend', 'Layout'],
   },
   {
@@ -58,13 +60,13 @@ export const COLUMN_MOCK_DATA = [
   {
     uuid: v4(),
     name: 'Manage data from a GraphQL server',
-    status: 'backlog',
+    status: 'todo',
     labels: ['Backend', 'GraphQL'],
   },
   {
     uuid: v4(),
     name: 'Create Storaj structure to support todo list',
-    status: 'backlog',
+    status: 'todo',
     labels: ['Backend', 'Storaj'],
   },
   {
@@ -88,13 +90,37 @@ export const COLUMN_MOCK_DATA = [
   {
     uuid: v4(),
     name: 'Improve scroll + scrollbars',
-    status: 'backlog',
+    status: 'progress',
     labels: ['Frontend', 'enhancement'],
   },
   {
     uuid: v4(),
     name: 'Move task with dragging',
-    status: 'todo',
+    status: 'done',
     labels: ['Frontend', 'functional'],
+  },
+  {
+    uuid: v4(),
+    name: 'Scrollable columns instead Scrollable board',
+    status: 'progress',
+    labels: ['Frontend', 'UX'],
+  },
+  {
+    uuid: v4(),
+    name: 'Create task',
+    status: 'backlog',
+    labels: ['Frontend', 'Component', 'Functional'],
+  },
+  {
+    uuid: v4(),
+    name: 'Update task',
+    status: 'backlog',
+    labels: ['Frontend', 'Component', 'Functional'],
+  },
+  {
+    uuid: v4(),
+    name: 'Remove task',
+    status: 'backlog',
+    labels: ['Frontend', 'Component', 'Functional'],
   },
 ];

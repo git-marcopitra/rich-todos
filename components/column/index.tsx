@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
 import { Box, Button, Typography } from '../../elements';
-import { COLUMN_MOCK_DATA } from './column.mocks';
 import { ColumnProps } from './column.types';
 import { isNormalColumn } from './column.utils';
 import ColumnTask from './column-task';
@@ -19,21 +18,30 @@ const Column: FC<ColumnProps> = (props) => {
       </Box>
     );
 
-  const { title, id } = props;
+  const { title, id, data, handleMoveTask } = props;
 
   return (
-    <Box minWidth="15rem" m="M" p="M">
+    <Box
+      m="M"
+      p="M"
+      minWidth="15rem"
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={() => sessionStorage.setItem('column.id', id)}
+    >
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Typography variant="normal">{title}</Typography>
         <Button variant="primary" p="M" borderRadius="S">
           ···
         </Button>
       </Box>
-      {COLUMN_MOCK_DATA.filter(({ status }) => status === id).map(
-        ({ uuid, name, labels }) => (
-          <ColumnTask key={uuid} name={name} labels={labels} />
-        )
-      )}
+      {data.map(({ uuid, name, labels }) => (
+        <ColumnTask
+          key={uuid}
+          name={name}
+          labels={labels}
+          onMoveTask={handleMoveTask(uuid)}
+        />
+      ))}
     </Box>
   );
 };
