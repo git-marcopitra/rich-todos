@@ -123,4 +123,10 @@ export const COLUMN_MOCK_DATA: ReadonlyArray<CardData> = [
     status: 'backlog',
     labels: ['Frontend', 'Component', 'Functional'],
   },
+  {
+    uuid: v4(),
+    name: 'Transform in a PWA',
+    status: 'backlog',
+    labels: ['Frontend', 'UX', 'Functional'],
+  },
 ];
