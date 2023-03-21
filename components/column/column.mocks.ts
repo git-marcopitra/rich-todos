@@ -46,7 +46,7 @@ export const TASK_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Column Style',
-    status: 'progress',
+    status: 'done',
     labels: ['Frontend', 'Layout'],
   },
   {
@@ -156,5 +156,17 @@ export const TASK_MOCK_DATA: ReadonlyArray<CardData> = [
     name: 'Transform in a PWA',
     status: 'backlog',
     labels: ['Frontend', 'UX', 'Functional'],
+  },
+  {
+    uuid: v4(),
+    name: 'Add micro frontend',
+    status: 'progress',
+    labels: ['Frontend', 'Functional'],
+  },
+  {
+    uuid: v4(),
+    name: 'Creating Vue repository',
+    status: 'progress',
+    labels: ['Environment', 'Functional'],
   },
 ];
