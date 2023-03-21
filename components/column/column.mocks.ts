@@ -160,13 +160,13 @@ export const TASK_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Add micro frontend',
-    status: 'progress',
+    status: 'done',
     labels: ['Frontend', 'Functional'],
   },
   {
     uuid: v4(),
     name: 'Creating Vue repository',
-    status: 'progress',
+    status: 'done',
     labels: ['Environment', 'Functional'],
   },
 ];
