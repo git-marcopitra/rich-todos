@@ -24,7 +24,6 @@ const Layout: FC<LayoutProps> = ({ pageTitle = '', children }) => {
           width="calc(100vw - 16rem)"
         >
           <Header />
-
           {children}
         </Box>
       </Box>

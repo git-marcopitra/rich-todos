@@ -1,8 +1,36 @@
 import { v4 } from 'uuid';
 
+import { generateColor } from '../../utils';
 import { CardData } from './column.types';
 
-export const COLUMN_MOCK_DATA: ReadonlyArray<CardData> = [
+export const COLUMN_MOCK_DATA = [
+  {
+    uuid: v4(),
+    id: 'backlog',
+    name: 'Backlog',
+    color: generateColor(),
+  },
+  {
+    uuid: v4(),
+    id: 'todo',
+    name: 'Todo',
+    color: generateColor(),
+  },
+  {
+    uuid: v4(),
+    id: 'progress',
+    name: 'In Progress',
+    color: generateColor(),
+  },
+  {
+    uuid: v4(),
+    id: 'done',
+    name: 'Done',
+    color: generateColor(),
+  },
+];
+
+export const TASK_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Sidebar',
@@ -90,7 +118,7 @@ export const COLUMN_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Improve scroll + scrollbars',
-    status: 'progress',
+    status: 'done',
     labels: ['Frontend', 'enhancement'],
   },
   {
@@ -102,7 +130,7 @@ export const COLUMN_MOCK_DATA: ReadonlyArray<CardData> = [
   {
     uuid: v4(),
     name: 'Scrollable columns instead Scrollable board',
-    status: 'progress',
+    status: 'done',
     labels: ['Frontend', 'UX'],
   },
   {

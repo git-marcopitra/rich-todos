@@ -8,6 +8,21 @@ const GlobalStyles = css`
     font-family: 'Andika', sans-serif;
   }
 
+  *::-webkit-scrollbar {
+    width: 0.8em;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    scrollbar-width: thin;
+    background: #645fc622;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    border-radius: 1rem;
+    background: #645fc6aa;
+  }
+
   body {
     overflow: hidden;
   }

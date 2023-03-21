@@ -21,6 +21,17 @@ const ColumnTask: FC<ColumnTaskProps> = ({ onMoveTask, name, labels }) => {
       borderRadius="M"
       onDragEnd={onDrop}
       boxShadow="0.2rem 0.2rem 0.2rem  #5C5A8C33"
+      nHover={{
+        cursor: 'grab',
+      }}
+      nActive={{
+        opacity: 0,
+        cursor: 'grabbing',
+        boxShadow: '0 0 0.5rem  #5C5A8C88',
+      }}
+      nFocus={{
+        boxShadow: '0 0 0.2rem  #5C5A8C88',
+      }}
     >
       <Typography variant="normal" mb="L">
         {name}

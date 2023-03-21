@@ -8,6 +8,9 @@ export const primary = css`
   cursor: pointer;
   font-weight: 700;
   border-radius: 2rem;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
   background: ${colors.accent};
   padding: ${space.L} ${space.XL};
   font-family: 'Andika', sans-serif;
